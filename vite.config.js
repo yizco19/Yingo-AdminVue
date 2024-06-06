@@ -15,9 +15,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': { // Obteniendo datos de la API
-        target: 'https://bonefish-unbiased-quickly.ngrok-free.app',//Servidor de la API
-        changeOrigin: true,//Cambiar el origen
-        rewrite: (path) => path.replace(/^\/api/, '') //Reescribir la ruta 
+        target: 'https://bonefish-unbiased-quickly.ngrok-free.app', // Servidor de la API
+        changeOrigin: true, // Cambiar el origen
+        rewrite: (path) => path.replace(/^\/api/, '') // Reescribir la ruta
       }
     }
   }
