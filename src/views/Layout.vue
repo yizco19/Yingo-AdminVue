@@ -175,7 +175,7 @@ const handleCommand = (command) => {
 
         &__logo {
             height: 120px;
-            background: url('@/assets/login2.png') no-repeat center / 120px auto;
+            background: url('../assets/login2.png') no-repeat center / 120px auto;
         }
 
         .el-menu {

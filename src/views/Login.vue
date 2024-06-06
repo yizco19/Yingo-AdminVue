@@ -178,15 +178,12 @@ const clear = ()=>{
 .pagina-login {
     height: 100vh;
     background-color: #fff;
-}
+
     .fondo {
-       background: url('../assets/logo2.png') no-repeat 60% center / 240px auto,
-           url('../assets/login_bg.jpeg') no-repeat center / cover;
-       border-radius: 0 20px 20px 0;
-   }
-
-
-
+        background: url('../assets/logo2.png') no-repeat 60% center / 240px auto,
+            url('../assets/login_bg.jpeg') no-repeat center / cover;
+        border-radius: 0 20px 20px 0;
+    }
 
     .formulario {
         display: flex;
