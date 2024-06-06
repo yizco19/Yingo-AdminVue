@@ -10,9 +10,10 @@ const instance = axios.create({ baseURL });
 instance.interceptors.request.use(
   (config) => {
     const token = useTokenStore().token;
+    config.headers.set("ngrok-skip-browser-warning", true);
     if (token) {
       config.headers.Authorization = token;
-      config.headers.set("ngrok-skip-browser-warning", true);
+
     }
     return config;
   },

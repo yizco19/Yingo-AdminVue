@@ -20,7 +20,7 @@ const routes = [
         path: '/',
         component: LayoutVue,
         children: [
-            { path: '/home', component: HomeMainVue, meta: { title: 'Página principal' } },
+            { path: '/home', component: HomeMainVue, meta: { title: 'Página principal',icon: '../../assets/logo.png' } },
             { path: '/product/category', component: ProductCategoryVue, meta: { title: 'Categoría de productos' } },
             { path: '/product/manage', component: ProductManageVue, meta: { title: 'Gestión de productos' } },
             { path: '/user/info', component: UserInfoVue, meta: { title: 'Información de usuario' } },

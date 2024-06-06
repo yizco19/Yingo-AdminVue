@@ -81,9 +81,7 @@ import {useTokenStore} from '@/store/token.js'
 //comprueba si ya esta logueado
 const tokenStore = useTokenStore();
 const router = useRouter()
-if (tokenStore.token) {
-      router.push('/home');
-    }
+
 
 const login = async()=>{
     let result = await userLoginService(loginData.value)
