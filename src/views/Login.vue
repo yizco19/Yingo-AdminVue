@@ -78,7 +78,11 @@ const register = async()=>{
 import {userLoginService} from '@/api/user'
 import {useRouter} from 'vue-router'
 import {useTokenStore} from '@/store/token.js'
+//comprueba si ya esta logueado
 const tokenStore = useTokenStore();
+if(tokenStore != null && tokenStore.token != null){
+
+}
 const router = useRouter()
 const login = async()=>{
     let result = await userLoginService(loginData.value)
@@ -91,7 +95,7 @@ const login = async()=>{
     tokenStore.setToken(result.data)
     ElMessage.success(result.msg ? result.msg : 'Login exitoso')
     // Si el login es exitoso, redirigir a la vista de inicio
-    router.push('/')
+    router.push('/home')
 }
 
 // clear loginData y Registro

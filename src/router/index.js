@@ -16,7 +16,7 @@ import OrderManage from '@/views/order/OrderManage.vue'
 // Definir las rutas
 const routes = [
     {   path: '/login',component: LoginVue},
-    {   path: '/',component: LayoutVue,redirect:'/home',children:[
+    {   path: '/',component: LayoutVue,redirect:'/login',children:[
         {path:'/home',component:HomeMainVue},
         {path:'/product/category',component:ProductCategoryVue},
         {path:'/product/manage',component:ProductManageVue},

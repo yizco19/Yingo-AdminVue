@@ -21,8 +21,6 @@ const userInfoStore = useUserInfoStore()
 const tokenStore = useTokenStore()
 const getUserInfo = async () => {
     let result = await userInfoService();
-    console.log("test");
-    console.log(result.data);
         userInfoStore.setInfo(result.data);
 
 }
@@ -58,8 +56,6 @@ const handleCommand = (command) => {
         message: 'Usuario cancelado la operación',
       })
     })
-        // cerrar la sesion
-        alert('Cerrando sesión')
     } else{
         router.push('/user/' + command)
     }
