@@ -2,7 +2,7 @@
     "routes": [
       {
         "src": "/api/(.*)",
-        "dest": "https://bonefish-unbiased-quickly.ngrok-free.app/api/$1"
+        "dest": "https://bonefish-unbiased-quickly.ngrok-free.app/$1"
       }
     ]
   }
