@@ -80,10 +80,11 @@ import {useRouter} from 'vue-router'
 import {useTokenStore} from '@/store/token.js'
 //comprueba si ya esta logueado
 const tokenStore = useTokenStore();
-if(tokenStore != null && tokenStore.token != null){
-
-}
 const router = useRouter()
+if (tokenStore.token) {
+      router.push('/home');
+    }
+
 const login = async()=>{
     let result = await userLoginService(loginData.value)
     /*if(result.code === 0){
