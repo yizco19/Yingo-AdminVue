@@ -1,9 +1,8 @@
 {
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "https://servidorshop-production.up.railway.app/$1"
-      }
-    ]
-  }
-  
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "https://servidorshop-production.up.railway.app/$1"
+    }
+  ]
+}
