@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
+
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
@@ -11,13 +12,14 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
+  }
+  ,
   server: {
     proxy: {
       '/api': { // Obteniendo datos de la API
-        target: 'https://servidorshop-production.up.railway.app', // Servidor de la API
-        changeOrigin: true, // Cambiar el origen
-        rewrite: (path) => path.replace(/^\/api/, '') // Reescribir la ruta
+        target: 'https://servidorshop-production.up.railway.app',//Servidor de la API
+        changeOrigin: true,//Cambiar el origen
+        rewrite: (path) => path.replace(/^\/api/, '') //Reescribir la ruta 
       }
     }
   }
