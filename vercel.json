@@ -1,9 +1,12 @@
 {
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "https://servidorshop-production.up.railway.app/$1"
-      }
-    ]
-  }
-  
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "https://servidorshop-production.up.railway.app/$1"
+    },
+    {
+      "src": "https://yingo-admin-kkczrvrmb-yizco19s-projects.vercel.app/(.*)",
+      "dest": "https://servidorshop-production.up.railway.app/$1"
+    }
+  ]
+}
