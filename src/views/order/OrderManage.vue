@@ -244,6 +244,7 @@ const updateStatus = async () => {
                     </template>
                     {{ orderModel.userName }}</el-descriptions-item>
                 <el-descriptions-item label="Total">{{ orderModel.total }}</el-descriptions-item>
+                <el-descriptions-item label="Dirección">{{ orderModel.address }}</el-descriptions-item>
                 <el-descriptions-item label="Estado">{{ orderModel.status }}</el-descriptions-item>
                 <el-descriptions-item label="Fecha">{{ orderModel.createdAt }}</el-descriptions-item>
             </el-descriptions>

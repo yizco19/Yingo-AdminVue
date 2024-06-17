@@ -75,8 +75,6 @@ const updateCategory = async()=>{
     ElMessage.success(result.msg ? result.msg : 'Categoría actualizada')
     dialogVisible.value = false
     categoryList();
-    
-
 
 }
 
