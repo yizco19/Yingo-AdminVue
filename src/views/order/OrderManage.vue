@@ -147,7 +147,8 @@ const orderModel = ref({
     userName: '',
     total: '',
     status: '',
-    createdAt: ''
+    createdAt: '',
+    address: ''
 });
 const visibleDrawer = ref(false);
 const visibleDialog = ref(false);
@@ -159,6 +160,8 @@ const showDialog = (row) => {
     orderModel.value.total = row.total;
     orderModel.value.status = row.statusText;
     orderModel.value.createdAt = row.createdAt;
+
+    orderModel.value.address = row.address;
 
     itemList(row.id);
 
@@ -248,7 +251,7 @@ const updateStatus = async () => {
                 <el-descriptions-item label="Estado">{{ orderModel.status }}</el-descriptions-item>
                 <el-descriptions-item label="Fecha">{{ orderModel.createdAt }}</el-descriptions-item>
             </el-descriptions>
-            <el-table :data="items" style="width: 70%">
+            <el-table :data="items" style="width: 70%" border>
                 <el-table-column prop="productId" label="ID" width="70" />
                 <el-table-column prop="productName" label="Nombre" width="100" />
                 <el-table-column label="Image" align="center">
@@ -291,4 +294,5 @@ const updateStatus = async () => {
         justify-content: space-between;
     }
 }
+
 </style>
